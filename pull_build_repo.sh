@@ -11,4 +11,4 @@ sudo apt install -y git
 
 cd /opt
 
-sudo git clone git clone https://$USER:$TOKEN@github.com/CloudWave-CaaS/SentinelBuild.git
+sudo git clone https://$USER:$TOKEN@github.com/CloudWave-CaaS/SentinelBuild.git
