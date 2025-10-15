@@ -28,7 +28,7 @@ case $choice in
         echo "Cloned HoneypotBuildScripts"
         ;;
     3)
-		sudo git clone https://$USER:$TOKEN@github.com/gocloudwave/VScanBuildScripts.git
+        sudo git clone https://$USER:$TOKEN@github.com/gocloudwave/VScanBuildScripts.git
         echo "Cloned both repositories"
         ;;
     9)
