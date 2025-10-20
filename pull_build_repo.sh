@@ -32,7 +32,7 @@ case $choice in
         sudo git clone https://$USER:$TOKEN@github.com/gocloudwave/VScanBuildScripts.git
         echo "Cloned VScanBuildScripts"
         ;;
-	4
+    4)
         sudo git clone https://$USER:$TOKEN@github.com/gocloudwave/OrchestratorBuildScripts.git
         echo "Cloned OrchestratorBuildScripts"
         ;;
