@@ -14,7 +14,8 @@ cd /opt
 echo "Select an option to clone:"
 echo "1) Clone SentinelBuildScripts"
 echo "2) Clone HoneypotBuildScripts"
-echo "3) Clone VScanScripts"
+echo "3) Clone VScanBuildScripts"
+echo "4) Clone OrchestratorBuildScripts"
 echo "9) Exit"
 read -p "Enter your choice [1-3, 9]: " choice
 
@@ -29,8 +30,11 @@ case $choice in
         ;;
     3)
         sudo git clone https://$USER:$TOKEN@github.com/gocloudwave/VScanBuildScripts.git
-        echo "Cloned both repositories"
+        echo "Cloned VScanBuildScripts"
         ;;
+	4
+		sudo git clone https://$USER:$TOKEN@github.com/gocloudwave/OrchestratorBuildScripts.git
+		echo "Cloned OrchestratorBuildScripts"
     9)
         echo "Exiting..."
         exit 0
