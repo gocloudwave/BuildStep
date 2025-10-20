@@ -33,9 +33,9 @@ case $choice in
         echo "Cloned VScanBuildScripts"
         ;;
 	4
-		sudo git clone https://$USER:$TOKEN@github.com/gocloudwave/OrchestratorBuildScripts.git
-		echo "Cloned OrchestratorBuildScripts"
-		;;
+        sudo git clone https://$USER:$TOKEN@github.com/gocloudwave/OrchestratorBuildScripts.git
+        echo "Cloned OrchestratorBuildScripts"
+        ;;
     9)
         echo "Exiting..."
         exit 0
