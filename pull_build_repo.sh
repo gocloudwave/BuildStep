@@ -2,7 +2,7 @@
 echo "[1/2] Enter GitHub User:"
 read USER
 echo GH User: $USER
-echo "[1/2] Enter GitHub Token:"
+echo "[2/2] Enter GitHub Token:"
 read TOKEN
 echo GH Token: $TOKEN
 
