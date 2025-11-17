@@ -1,5 +1,5 @@
 # Grab and deploy
 
-curl -sL -o pull_build_repo.sh tinyurl.com/3z3hvt5r
+curl -sL -o clone_repo.sh https://tinyurl.com/2vybtret
 
-bash pull_build_repo.sh
+bash clone_repo.sh
