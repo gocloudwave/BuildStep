@@ -1,8 +1,10 @@
+#!/bin/bash
+read -r -p "[1/2] Enter GitHub User: " GITHUB_USER
+echo "GH User: $GITHUB_USER"
+read -r -s -p "[2/2] Enter GitHub Token: " GITHUB_TOKEN
+echo "GH Token: ${#GITHUB_TOKEN} characters"
 
-read -r -p "[1/2] Enter GitHub User: " USER
-echo "GH User: $USER"
-read -r -s -p "[2/2] Enter GitHub Token: " TOKEN
-echo "GH Token: ${#TOKEN} characters"
+export GITHUB_USER GITHUB_TOKEN
 
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y git
@@ -19,19 +21,22 @@ read -p "Enter your choice [1-3, 9]: " choice
 
 case $choice in
     1)
-        sudo git clone https://$USER:$TOKEN@github.com/gocloudwave/SentinelBuildScripts.git
+        sudo git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/gocloudwave/SentinelBuildScripts.git
         echo "Cloned SentinelBuildScripts"
         ;;
     2)
-        sudo git clone https://$USER:$TOKEN@github.com/gocloudwave/HoneypotBuildScripts.git
+        sudo git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/gocloudwave/HoneypotBuildScripts.git
         echo "Cloned HoneypotBuildScripts"
+
+        cd HoneypotBuildScripts
+        bash hp-build.sh
         ;;
     3)
-        sudo git clone https://$USER:$TOKEN@github.com/gocloudwave/VScanBuildScripts.git
+        sudo git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/gocloudwave/VScanBuildScripts.git
         echo "Cloned VScanBuildScripts"
         ;;
     4)
-        sudo git clone https://$USER:$TOKEN@github.com/gocloudwave/OrchestratorBuildScripts.git
+        sudo git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/gocloudwave/OrchestratorBuildScripts.git
         echo "Cloned OrchestratorBuildScripts"
         ;;
     9)
@@ -43,3 +48,6 @@ case $choice in
         exit 1
         ;;
 esac
+
+unset GITHUB_USER
+unset GITHUB_TOKEN
