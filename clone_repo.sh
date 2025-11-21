@@ -1,10 +1,8 @@
 
-echo "[1/2] Enter GitHub User:"
-read USER
-echo GH User: $USER
-echo "[2/2] Enter GitHub Token:"
-read TOKEN
-echo GH Token: $TOKEN
+read -r -p "[1/2] Enter GitHub User:" USER
+echo "GH User: $USER"
+read -r -s -p "[2/2] Enter GitHub Token:" TOKEN
+echo "GH Token: ${#TOKEN} characters"
 
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y git
