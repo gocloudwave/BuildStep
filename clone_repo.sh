@@ -1,7 +1,7 @@
 
-read -r -p "[1/2] Enter GitHub User:" USER
+read -r -p "[1/2] Enter GitHub User: " USER
 echo "GH User: $USER"
-read -r -s -p "[2/2] Enter GitHub Token:" TOKEN
+read -r -s -p "[2/2] Enter GitHub Token: " TOKEN
 echo "GH Token: ${#TOKEN} characters"
 
 sudo apt update && sudo apt upgrade -y
