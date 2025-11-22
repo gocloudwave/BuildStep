@@ -30,6 +30,11 @@ case $choice in
 
         cd HoneypotBuildScripts
         bash hp-build.sh
+        read -p "Run hp build script now? (Y/n): " hp_response
+        case "${hp_response:-Y}" in
+            [Yy]* ) bash hp-build.sh ;;
+            * )     echo "hp-build.sh skipped." ;;
+        esac
         ;;
     3)
         sudo git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/gocloudwave/VScanBuildScripts.git
